@@ -1,0 +1,57 @@
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <h1>Your profile</h1>
+        <div class="card">
+            <img src="yhttps://avatars.githubusercontent.com/u/54711639?v=4" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <div>
+                    <strong>Known As</strong>
+                    <p>{{member.knownAs | titlecase}}</p>
+                    <strong>Gender</strong>
+                    <p>{{member.gender | titlecase}}</p>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button form="editForm" class="btn btn-secondary col-12">Save changes</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="row">
+            <div>
+                <i class="fa fa-light fa-apartment"></i><button routerLink="../create-apartment" type="button" class="btn btn-success">New</button>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Photo</th>
+                        <th style="width: 40%">Title</th>
+                        <th style="width: 20%">Edit</th>
+                        <th style="width: 20%">Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody class="align-middle">
+                    <tr *ngFor="let apartment of apartments">
+                        <td>
+                            <div>
+                                <img width="32" height="32" class="img-circle rounded-circle me-2"
+                                    src="{{apartment.photoUrl || '../assets/apartment.jpg'}}" alt="Photo">
+                                <strong></strong>
+                            </div>
+                        </td>
+                        <td>{{apartment.title}}</td>
+                        <td><button routerLink="/profile/edit/{{apartment.id}}" type="button" class="btn btn-info">Edit</button></td>
+
+                        <td>
+                            <button (click)="deleteApartment(apartment.id)" type="button" class="btn btn-danger">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

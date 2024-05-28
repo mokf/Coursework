@@ -1,0 +1,60 @@
+<div class="row" *ngIf="apartment">
+    <div class="col-4">
+        <div class="card">
+            <img src="{{apartment.photoUrl || '../assets/apartment.jpg'}}" alt="{{apartment.title}}"
+                class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <strong>Location: </strong>
+                <p>{{apartment.city}}, {{apartment.country}}</p>
+                <strong>Has TV/WiFi: </strong>
+                <p><i *ngIf="apartment.hasTV" class="class fa fa-circle text-success fa-fade"></i> <i
+                        *ngIf="!apartment.hasTV" class="class fa fa-circle text-danger fa-fade"></i> / <i
+                        *ngIf="apartment.hasWifi" class="class fa fa-circle text-success fa-fade"></i> <i
+                        *ngIf="!apartment.hasWifi" class="class fa fa-circle text-danger fa-fade"></i></p>
+                <strong>Price: </strong>
+                <p>{{apartment.price}}</p>
+                <strong style="margin-right: 2px;">Is availiable: </strong>
+                <i *ngIf="apartment.isAvaliable" class="class fa fa-circle text-success fa-fade"></i>
+                <i *ngIf="!apartment.isAvaliable" class="class fa fa-circle text-danger fa-fade"></i>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group float-start">
+                    <button (click)="rentApartment()" class="btn btn-primary">Rent</button>
+                    <button (click)="cancelRentApartment()" class="btn btn-primary">Unrent</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <tabset class="apartment-tabs" #apartmentTabs>
+            <tab heading="About {{apartment.title}}">
+                <h3 style="margin-top: 10px"><strong>Details: </strong></h3>
+                <p>{{apartment.details}}</p>
+                <strong>Has TV/WiFi: </strong>
+                <p><i *ngIf="apartment.hasTV" class="class fa fa-circle text-success fa-fade"></i> <i
+                        *ngIf="!apartment.hasTV" class="class fa fa-circle text-danger fa-fade"></i> / <i
+                        *ngIf="apartment.hasWifi" class="class fa fa-circle text-success fa-fade"></i> <i
+                        *ngIf="!apartment.hasWifi" class="class fa fa-circle text-danger fa-fade"></i></p>
+                <strong>Price: </strong>
+                <p>{{apartment.price}}</p>
+                <strong>Max size: </strong>
+                <p>{{apartment.maxPeople}}</p>
+                <strong>Is availiable: </strong>
+                <br>
+                <i *ngIf="apartment.isAvaliable" class="class fa fa-circle text-success fa-fade"></i>
+                <i *ngIf="!apartment.isAvaliable" class="class fa fa-circle text-danger fa-fade"></i>
+                <br>
+                <strong>Location: </strong>
+                <p>{{apartment.city}}, {{apartment.country}}</p>
+            </tab>
+            <tab heading="Photos">
+                <h3 style="margin-top: 10px"><strong>Photos: </strong></h3>
+                <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+            </tab>
+        </tabset>
+    </div>
+</div>
+
+<div *ngIf="!apartment">
+    <app-not-found></app-not-found>
+</div>

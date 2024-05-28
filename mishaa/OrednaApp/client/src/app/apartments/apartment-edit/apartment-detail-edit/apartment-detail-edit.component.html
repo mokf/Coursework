@@ -1,0 +1,56 @@
+<div class="row" *ngIf="apartment">
+    <div class="col-4">
+        <div class="card">
+            <img src="{{apartment.photoUrl || '../assets/apartment.jpg'}}" alt="{{apartment.title}}"
+                class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <strong>Location: </strong>
+                <p>{{apartment.city}}, {{apartment.country}}</p>
+                <strong>Has TV/WiFi: </strong>
+                <p><i *ngIf="apartment.hasTV" class="class fa fa-circle text-success fa-fade"></i> <i *ngIf="!apartment.hasTV" class="class fa fa-circle text-danger fa-fade"></i>  / <i *ngIf="apartment.hasWifi" class="class fa fa-circle text-success fa-fade"></i> <i *ngIf="!apartment.hasWifi" class="class fa fa-circle text-danger fa-fade"></i></p>
+                <strong>Price: </strong>
+                <p>{{apartment.price}}</p>
+                <strong style="margin-right: 2px;">Is availiable: </strong>
+                <i *ngIf="apartment.isAvaliable" class="class fa fa-circle text-success fa-fade"></i>
+                <i *ngIf="!apartment.isAvaliable" class="class fa fa-circle text-danger fa-fade"></i>
+            </div>
+            <div class="card-footer">
+                <button type="submit" [disabled]="!editForm.dirty" form="editForm" class="btn btn-secondary col-12">Save
+                    changes</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="alert alert-info pb-2" *ngIf="editForm.dirty">
+            <p><strong>Information: </strong>You have made changes. Any unsaved changes will be lost</p>
+        </div>
+        <tabset class="apartment-tabs" #apartmentTabs>
+            <tab heading="Edit {{apartment.title}}">
+                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateApartment()">
+                    <h3 style="margin-top: 10px"><strong>Details: </strong></h3>
+                    <textarea class="form-control" [(ngModel)]="apartment.details" name="details" rows="6"></textarea>
+                    <strong>Price: </strong>
+                    <textarea class="form-control" [(ngModel)]="apartment.price" name="price" rows="1"></textarea>
+                    <strong>Maximum people: </strong>
+                    <textarea class="form-control" [(ngModel)]="apartment.maxPeople" name="maxPeople"
+                        rows="1"></textarea>
+                    <strong>Location: </strong>
+                    <div class="d-flex flex-row align-items-center">
+                        <label for="city" style="margin-right: 10px;">City: </label>
+                        <input type="text" [(ngModel)]="apartment.city" name="city" class="form-control-mx-2">
+                        <label for="city" style="margin-left: 10px; margin-right: 10px;">Country: </label>
+                        <input type="text" [(ngModel)]="apartment.country" name="country" class="form-control-mx-2">
+                    </div>
+                </form>
+            </tab>
+            <tab heading="Edit Photos">
+                <h3 style="margin-top: 10px">Photos: </h3>
+                <app-photo-editor [apartment]="apartment"></app-photo-editor>
+            </tab>
+        </tabset>
+    </div>
+</div>
+
+<div *ngIf="!apartment">
+    <app-not-found></app-not-found>
+</div>

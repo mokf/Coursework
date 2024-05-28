@@ -1,0 +1,63 @@
+<div class="modal-content rounded-4 shadow">
+    <div class="modal-header p-5 pb-4 border-bottom-0">
+        <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+        <h1 class="fw-bold mb-0 fs-2">Create your rent offer for free</h1>
+        <button routerLink="../edit" type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body p-5 pt-0">
+        <form [formGroup]="creatingForm" autocomplete="off" (ngSubmit)="creatingForm.valid && create()">
+            <div class="form-floating mb-3">
+                <app-text-input [id]="'floatingTitle'" [type]="'text'"
+                    [formControl]="$any(creatingForm.controls['title'])" [label]="'Title'"></app-text-input>
+            </div>
+            <div class="form-floating mb-3">
+                <app-text-input [id]="'floatingCity'" [type]="'text'"
+                    [formControl]="$any(creatingForm.controls['city'])" [label]="'City'"></app-text-input>
+            </div>
+            <div class="form-floating mb-3">
+                <app-text-input id="floatingCountry" [type]="'text'"
+                    [formControl]="$any(creatingForm.controls['country'])" [label]="'Country'"></app-text-input>
+            </div>
+            <div class="form-floating mb-3">
+                <app-text-input id="floatingPrice" [type]="'number'"
+                    [formControl]="$any(creatingForm.controls['price'])" [label]="'Price'"></app-text-input>
+            </div>
+            <div class="form-floating mb-3">
+                <app-text-input id="floatingMaxPeople" [type]="'number'"
+                    [formControl]="$any(creatingForm.controls['maxPeople'])" [label]="'Max People'"></app-text-input>
+            </div>
+
+            <div class="mb-3">
+                <label style="margin-right: 10px;">Has TV: </label>
+                <br>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" [value]="true" formControlName="hasTV"> Yes
+                </label>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input ms-3" [value]="false" formControlName="hasTV"> No
+                </label>
+            </div>
+
+            <div class="mb-3">
+                <label style="margin-right: 10px;">Has Wifi: </label>
+                <br>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" [value]="true" formControlName="hasWifi"> Yes
+                </label>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input ms-3" [value]="false" formControlName="hasWifi"> No
+                </label>
+            </div>
+
+            <!-- <div class="row" *ngIf="validationErrors">
+          <ul class="text-danger">
+              <li *ngFor="let error of validationErrors">{{error}}</li>
+          </ul>
+      </div> -->
+
+            <button class="mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Create</button>
+        </form>
+    </div>
+</div>

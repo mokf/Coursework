@@ -1,0 +1,194 @@
+[
+    {
+        "UserName": "Elizabeth",
+        "KnownAs": "Elizabeth",
+        "Gender": "female",
+        "Apartments": [
+            {
+                "Title": "Manitou/Pitcairn",
+                "Details": "Aliquip nulla aute consectetur ut quis Lorem cillum dolore ut cillum. Reprehenderit minim sint exercitation nulla qui. Sint Lorem mollit do magna non voluptate. Et sit adipisicing qui nostrud. Consectetur nulla fugiat anim cillum. Nulla Lorem minim sint deserunt est sunt velit commodo tempor elit aliquip ex.\r\n",
+                "City": "Foscoe",
+                "Country": "Christmas Island",
+                "Price": 3523,
+                "MaxPeople": 7,
+                "HasTV": true,
+                "HasWifi": true,
+                "IsAvaliable": true,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154428/rent-apartment/photo_2023-05-03_21-10-06_oiwg6y.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "UserName": "Beth",
+        "KnownAs": "Beth",
+        "Gender": "female",
+        "Apartments": [
+            {
+                "Title": "Dundee/Honduras",
+                "Details": "Sint adipisicing ad laboris nulla Lorem do occaecat cillum velit quis non sint deserunt. Dolore anim reprehenderit exercitation proident quis consequat nostrud anim ut. Elit est ut id magna eu quis. Laborum fugiat proident amet esse eiusmod amet in excepteur dolore dolore anim incididunt.\r\n",
+                "City": "Ogema",
+                "Country": "Suriname",
+                "Price": 1384,
+                "MaxPeople": 8,
+                "HasTV": true,
+                "HasWifi": true,
+                "IsAvaliable": true,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154428/rent-apartment/photo_2023-05-03_21-10-06_2_rsezgr.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "UserName": "Antonia",
+        "KnownAs": "Antonia",
+        "Gender": "female",
+        "Apartments": [
+            {
+                "Title": "Weeksville/India",
+                "Details": "Labore irure culpa esse consequat excepteur proident. Laboris irure laboris ullamco veniam esse proident in. Minim consequat occaecat labore est et non aute. Veniam est elit aliqua voluptate occaecat commodo culpa do eiusmod veniam.\r\n",
+                "City": "Riviera",
+                "Country": "Hong Kong",
+                "Price": 6250,
+                "MaxPeople": 7,
+                "HasTV": true,
+                "HasWifi": true,
+                "IsAvaliable": true,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154428/rent-apartment/photo_2023-05-03_21-10-03_2_b8wdbw.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "UserName": "Marquez",
+        "KnownAs": "Marquez",
+        "Gender": "male",
+        "Apartments": [
+            {
+                "Title": "Downsville/Brunei Darussalam",
+                "Details": "Irure est dolor do veniam laborum velit. Reprehenderit amet id occaecat ipsum adipisicing. Minim labore laborum adipisicing pariatur occaecat duis. Consequat adipisicing excepteur est ut voluptate labore pariatur laborum nostrud deserunt qui aute. Adipisicing labore velit aliquip mollit labore adipisicing nulla eiusmod do.\r\n",
+                "City": "Sexton",
+                "Country": "Tajikistan",
+                "Price": 1731,
+                "MaxPeople": 8,
+                "HasTV": true,
+                "HasWifi": false,
+                "IsAvaliable": false,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154427/rent-apartment/photo_2023-05-03_21-10-04_wmdrcs.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "UserName": "Riggs",
+        "KnownAs": "Riggs",
+        "Gender": "male",
+        "Apartments": [
+            {
+                "Title": "Leola/Nigeria",
+                "Details": "Ea velit qui et adipisicing magna voluptate magna. Voluptate irure quis elit laborum amet qui duis minim. Sit eu mollit velit ex quis. Veniam ad voluptate ipsum dolor ut consequat ipsum occaecat aliquip nostrud. Aliquip elit anim do commodo Lorem adipisicing aliqua incididunt esse tempor ut.\r\n",
+                "City": "Croom",
+                "Country": "Egypt",
+                "Price": 6574,
+                "MaxPeople": 10,
+                "HasTV": true,
+                "HasWifi": false,
+                "IsAvaliable": false,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154427/rent-apartment/photo_2023-05-03_21-10-03_qpnwp6.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "UserName": "Moon",
+        "KnownAs": "Moon",
+        "Gender": "male",
+        "Apartments": [
+            {
+                "Title": "Babb/Niger",
+                "Details": "Aliqua enim excepteur irure tempor quis irure eiusmod aute. Et proident magna et non cupidatat anim nostrud tempor. Pariatur ullamco id quis laborum veniam ipsum.\r\n",
+                "City": "Vowinckel",
+                "Country": "Viet Nam",
+                "Price": 7043,
+                "MaxPeople": 6,
+                "HasTV": true,
+                "HasWifi": false,
+                "IsAvaliable": false,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154427/rent-apartment/photo_2023-05-03_21-10-04_2_nl14xb.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "UserName": "Baker",
+        "KnownAs": "Baker",
+        "Gender": "male",
+        "Apartments": [
+            {
+                "Title": "Why/Germany",
+                "Details": "Consectetur mollit fugiat ut consectetur enim sit ex ipsum. Aute sit ea consequat ea culpa minim irure. Ad cupidatat ullamco occaecat irure sint eu velit eiusmod nisi ipsum aute. Sit elit aute dolore adipisicing labore tempor ipsum Lorem. Quis velit dolore eu eiusmod amet quis sint.\r\n",
+                "City": "Bartonsville",
+                "Country": "Ecuador",
+                "Price": 9649,
+                "MaxPeople": 5,
+                "HasTV": false,
+                "HasWifi": true,
+                "IsAvaliable": false,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154427/rent-apartment/photo_2023-05-03_21-10-05_2_swzwoe.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "UserName": "Sloan",
+        "KnownAs": "Sloan",
+        "Gender": "male",
+        "Apartments": [
+            {
+                "Title": "Greensburg/Bulgaria",
+                "Details": "Magna in labore pariatur sint. Culpa exercitation aute esse Lorem ullamco. Commodo incididunt dolor reprehenderit commodo ea aute sint Lorem qui nostrud incididunt ipsum velit commodo. Ipsum amet ad officia dolore non laborum. Sit culpa nisi non proident ullamco voluptate enim esse magna nulla commodo aute. Cupidatat magna est elit esse dolore aliqua quis officia enim adipisicing. Non dolor magna irure et culpa proident dolore ut Lorem dolor nisi cillum.\r\n",
+                "City": "Saranap",
+                "Country": "Nicaragua",
+                "Price": 7892,
+                "MaxPeople": 6,
+                "HasTV": false,
+                "HasWifi": true,
+                "IsAvaliable": false,
+                "Photos": [
+                    {
+                        "Url": "https://res.cloudinary.com/dltb0q3w6/image/upload/v1683154427/rent-apartment/photo_2023-05-03_21-10-05_dtgwpk.jpg",
+                        "isMain": true
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="container" *ngIf="apartmentParams">
+        <form #form="ngForm" class="d-flex mb-3" (ngSubmit)="applyFilters()" autocomplete="off">
+            <div class="d-flex mx-2">
+                <label class="col-form-label">Price: </label>
+                <select name="price" style="width: 130px;" [(ngModel)]="apartmentParams.price" class="form-select ms-1">
+                    <option [value]="price.value" *ngFor="let price of priceList">{{price.display}}
+                    </option>
+                </select>
+            </div>
+            <div class="d-flex mx-2">
+                <label class="col-form-label">Max People: </label>
+                <select name="people" style="width: 130px;" [(ngModel)]="apartmentParams.people"
+                    class="form-select ms-1">
+                    <option [value]="people.value" *ngFor="let people of peopleList">{{people.display}}
+                    </option>
+                </select>
+            </div>
+            <div class="d-flex mx-2">
+                <label class="col-form-label">TV: </label>
+                <select name="hasTV" style="width: 130px;" [(ngModel)]="apartmentParams.hasTV" class="form-select ms-1">
+                    <option [value]="tv.value" *ngFor="let tv of tvList">{{tv.display}}
+                    </option>
+                </select>
+            </div>
+            <div class="d-flex mx-2">
+                <label class="col-form-label">Wifi: </label>
+                <select name="hasWifi" style="width: 130px;" [(ngModel)]="apartmentParams.hasWifi"
+                    class="form-select ms-1">
+                    <option [value]="wifi.value" *ngFor="let wifi of wifiList">{{wifi.display}}
+                    </option>
+                </select>
+            </div>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 lg-3" role="search">
+                <input #search type="search" class="form-control form-control-light text-bg-light" placeholder="Search..."
+                    aria-label="Search">
+            </form>
+
+            <button class="btn btn-primary ms-1" type="submit">Apply Filters</button>
+            <button (click)="resetFilters()" class="btn btn-info ms-1" type="submit">Reset Filters</button>
+        </form>
+    </div>
+
+    <div class="col-4" *ngFor="let apartment of apartments">
+        <app-apartment-card [apartment]="apartment"></app-apartment-card>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center" *ngIf="pagination">
+    <pagination [boundaryLinks]="true" [totalItems]="pagination.totalItems" [itemsPerPage]="pagination.itemsPerPage"
+        [maxSize]="10" [(ngModel)]="pagination.currentPage" (pageChanged)="pageChanged($event)" previousText="&lsaquo;"
+        nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
+    </pagination>
+</div>
